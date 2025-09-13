@@ -367,16 +367,16 @@ if budget != "All":
 
 # List of 10 property images
 property_images = [
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat 1.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat 2.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat 3.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flAT 4.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\FLAT 5.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\FLAT6.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\FLAT7.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat8.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat9.jpg",
-    r"C:\Users\proma\OneDrive\Desktop\New folder (2)\flat10.jpg"
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat%201.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat%202.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat%203.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flAT%204.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/FLAT%205.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/FLAT6.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/FLAT7.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat8.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat9.jpg",
+    r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/flat10.jpg"
 ]
 
 
@@ -394,10 +394,10 @@ def get_base64_of_file(path):
         return base64.b64encode(f.read()).decode()
 
 # ✅ Use raw strings (r"...") for Windows paths
-img1 = get_base64_of_file(r"C:\Users\proma\OneDrive\Desktop\New folder (2)\tower1.jpg")
-img2 = get_base64_of_file(r"C:\Users\proma\OneDrive\Desktop\New folder (2)\tower2.jpg")
-img3 = get_base64_of_file(r"C:\Users\proma\OneDrive\Desktop\New folder (2)\tower3.jpg")
-img4 = get_base64_of_file(r"C:\Users\proma\OneDrive\Desktop\New folder (2)\tower4.jpg")
+img1 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower1.jpg")
+img2 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower2.jpg")
+img3 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower3.jpg")
+img4 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg")
 
 # Carousel HTML
 carousel_html = f"""
