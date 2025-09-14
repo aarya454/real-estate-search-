@@ -325,23 +325,38 @@ if search:
 
 
 
+
 # ---------- Post Property Form ----------
 if post_property:
     st.subheader("Post Your Property")
-    with st.form("post_form", clear_on_submit=True):
-        region = st.text_input("Region (e.g., Andheri, Bandra)")
-        locality = st.text_input("Locality (e.g., Powai, Lokhandwala)")
-        bhk = st.selectbox("BHK", ["1", "2", "3", "4", "5+"])
-        price = st.number_input("Price (in Lakhs)", min_value=1)
+    with st.form("post_property_form", clear_on_submit=True):
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            region = st.text_input("Region (e.g., Andheri, Bandra)")
+            bhk = st.selectbox("BHK", ["1", "2", "3", "4", "5+"])
+
+        with col2:
+            locality = st.text_input("Locality (e.g., Powai, Lokhandwala)")
+            area = st.number_input("Area (sqft)", min_value=100, max_value=10000, step=50)
+
+        with col3:
+            price = st.number_input("Price (in Lakhs)", min_value=1, max_value=10000, step=1)
+            status = st.selectbox("Status", ["Ready", "Under Construction"])
+            age = st.number_input("Property Age (years)", min_value=0, max_value=100, step=1)
+
         image = st.file_uploader("Upload Property Image", type=["jpg", "png", "jpeg"])
-        submitted = st.form_submit_button("Submit Property")
+
+        submitted = st.form_submit_button("✅ Post Property")
 
         if submitted:
             st.success("✅ Your property has been posted successfully!")
-            st.info(f"Region: {region}, Locality: {locality}, BHK: {bhk}, Price: ₹{price} Lakhs")
+            st.info(
+                f"Region: {region}, Locality: {locality}, BHK: {bhk}, "
+                f"Area: {area} sqft, Price: ₹{price} Lakhs, Status: {status}, Age: {age} years"
+            )
             if image:
                 st.image(image, caption="Uploaded Property Image", use_container_width=True)
-
 
 
 
