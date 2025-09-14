@@ -398,6 +398,7 @@ img_urls = [
 "https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg"
 ]
 
+# ✅ Notice the f here ↓
 carousel_html = f"""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
@@ -437,10 +438,8 @@ $(document).ready(function(){{
 </script>
 """
 
-
 st.subheader("🏙️ Featured Towers")
 components.html(carousel_html, height=450)
-
 
 
 
