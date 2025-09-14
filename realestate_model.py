@@ -425,6 +425,7 @@ carousel_html = f"""
   </div>
 </div>
 
+
 <script>
 $(document).ready(function(){{
   $('.carousel').slick({{
