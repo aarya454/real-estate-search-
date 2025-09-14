@@ -392,10 +392,10 @@ import streamlit.components.v1 as components
 
 # ✅ Use raw strings (r"...") for Windows paths
 img_urls = [
-"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower1.jpg"
-"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower2.jpg"
-"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower3.jpg"
-"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg"
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower1.jpg",
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower2.jpg",
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower3.jpg",
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg",
 ]
 
 # ✅ Notice the f here ↓
