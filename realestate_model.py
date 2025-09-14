@@ -384,20 +384,19 @@ property_images = [
 
 # ---------- Show Properties ----------
 
-import base64
 import streamlit as st
 import streamlit.components.v1 as components
 
 # Function to convert image to base64
-def get_base64_of_file(path):
-    with open(path, "rb") as f:
-        return base64.b64encode(f.read()).decode()
+
 
 # ✅ Use raw strings (r"...") for Windows paths
-img1 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower1.jpg")
-img2 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower2.jpg")
-img3 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower3.jpg")
-img4 = get_base64_of_file(r"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg")
+img_urls = [
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower1.jpg"
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower2.jpg"
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower3.jpg"
+"https://raw.githubusercontent.com/aarya454/real-estate-search-/36668be2a9e2bb7fa61f21c5a086cd9758cc55f7/tower4.jpg"
+]
 
 # Carousel HTML
 carousel_html = f"""
@@ -419,10 +418,10 @@ carousel_html = f"""
 
 <div class="carousel-container">
   <div class="carousel">
-    <div><img src="data:image/jpeg;base64,{img1}" alt="Luxury Tower 1"></div>
-    <div><img src="data:image/jpeg;base64,{img2}" alt="Skyline Tower"></div>
-    <div><img src="data:image/jpeg;base64,{img3}" alt="Modern Residences"></div>
-    <div><img src="data:image/jpeg;base64,{img4}" alt="Classic Apartments"></div>
+    <div><img src="{img_urls[0]}" alt="Luxury Tower 1"></div>
+    <div><img src="{img_urls[1]}" alt="Skyline Tower"></div>
+    <div><img src="{img_urls[2]}" alt="Modern Residences"></div>
+    <div><img src="{img_urls[3]}" alt="Classic Apartments"></div>
   </div>
 </div>
 
@@ -441,7 +440,6 @@ $(document).ready(function(){{
 
 st.subheader("🏙️ Featured Towers")
 components.html(carousel_html, height=450)
-
 
 
 
